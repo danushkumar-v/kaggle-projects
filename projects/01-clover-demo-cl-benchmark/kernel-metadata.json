@@ -1,5 +1,5 @@
 {
-  "id": "danushkumarv/clover-demo-cl-benchmark",
+  "id": "danushkumarv/clover-benchmarking-class-overlap-in-cl",
   "title": "CLOVER: Benchmarking Class-Overlap in Continual Learning",
   "code_file": "notebook.ipynb",
   "language": "python",
