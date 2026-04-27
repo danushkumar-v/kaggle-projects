@@ -54,7 +54,7 @@ README, and Makefile pre-wired.
 
 | # | Project | Topic | Kaggle |
 |---|---------|-------|--------|
-| 01 | clover-demo-cl-benchmark | Continual learning with class overlap | _coming soon_ |
+| 01 | clover-demo-cl-benchmark | Continual learning with class overlap | https://www.kaggle.com/code/danushkumarv/clover-demo-cl-benchmark |
 
 ## Notes
 
