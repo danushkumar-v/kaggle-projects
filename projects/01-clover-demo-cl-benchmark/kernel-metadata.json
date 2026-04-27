@@ -1,6 +1,6 @@
 {
-  "id": "danushkumarv/clover-benchmarking-class-overlap-in-continual-learning",
-  "title": "CLOVER: Benchmarking Class-Overlap in Continual Learning",
+  "id": "danushkumarv/clover-class-overlap-in-continual-learning",
+  "title": "CLOVER: Class-Overlap in Continual Learning",
   "code_file": "notebook.ipynb",
   "language": "python",
   "kernel_type": "notebook",
