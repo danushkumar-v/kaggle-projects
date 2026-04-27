@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Kaggle credentials — NEVER commit
+kaggle.json
+.kaggle/
+**/kaggle.json
+
+# Local data and outputs
+*/data/
+*/output/
+*/checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.h5
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Notebook outputs (we DO commit notebooks with outputs — see README)
+# Don't blanket-ignore *.ipynb_checkpoints handles temp state already
