@@ -55,7 +55,7 @@ README, and Makefile pre-wired.
 | # | Project | Topic | Kaggle |
 |---|---------|-------|--------|
 | 01 | clover-demo-cl-benchmark | Continual learning with class overlap | https://www.kaggle.com/code/danushkumarv/clover-class-overlap-in-continual-learning |
-| 02 | l2p-clover-overlap-analysis | L2P prompt-based CL on overlapping CIFAR-100 streams | https://www.kaggle.com/code/danushkumarv/l2p-meets-class-overlap |
+| 02 | l2p-clover-overlap-analysis | L2P prompt-based CL on overlapping CIFAR-100 streams | https://www.kaggle.com/code/danushkumarv/l2p-class-overlap-when-cl-classes-come-back |
 
 ## Notes
 
