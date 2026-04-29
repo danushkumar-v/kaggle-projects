@@ -1,36 +1,38 @@
----
-project: 02-l2p-clover-overlap-analysis
-palette: forest-sage (id 2)
----
-
 # 02 -- L2P + class overlap: when CL classes come back
 
-> Running L2P (Learning to Prompt, CVPR 2022) on two CIFAR-100 task
-> streams designed with the [CLOVER](https://github.com/danushkumar-v/clover-cl)
-> benchmark library: a partial-overlap stream and a full-replay stream.
-> The headline question: what does the prompt pool actually do when
-> classes come back?
+> Running [L2P](https://arxiv.org/abs/2112.08654) (Learning to Prompt,
+> CVPR 2022) on two CIFAR-100 task streams designed with the
+> [CLOVER](https://github.com/danushkumar-v/clover-cl) benchmark library:
+> a partial-overlap stream and a full-replay stream. The headline question:
+> what does the prompt pool actually do when classes come back?
+
+## What this project shows
+
+- A clean, ~80-line implementation of L2P on a frozen ViT-B/16
+  (timm, ImageNet-21k pretrained)
+- Two carefully constructed CIFAR-100 streams using the CLOVER
+  `OverlapSpec` API: partial overlap (5 recurring classes, each in two
+  tasks) and exact overlap (task 0 == task 2 in classes, image-disjoint
+  samples)
+- Standard CL metrics (accuracy matrix, BWT, FWT) plus a per-class
+  recurring-vs-novel breakdown and three prompt-pool diagnostics that
+  open the black box on what the prompts actually learned
+- A short failure-mode tour using real misclassified images
 
 ## Setup
 
 - **Backbone:** ViT-B/16 pretrained on ImageNet-21k (frozen)
-- **Method:** L2P -- inline ~80-line implementation, no submodule hopping
+- **Method:** L2P -- inline implementation, no submodule hopping
 - **Dataset:** CIFAR-100, 4 tasks, 10 classes per task
-- **Scenario A (partial):** 5 classes recur across two tasks each (image-disjoint)
-- **Scenario B (exact):** task 0 == task 2 in classes (image-disjoint samples)
 
 ## Run
 
 ```bash
-make push           # push to Kaggle as PRIVATE (re-executes there on T4)
+make push           # push to Kaggle (re-executes there on T4)
 make status         # check Kaggle execution status
 make pull           # pull executed notebook back (with outputs)
 make open           # print Kaggle URL
 ```
-
-The Kaggle T4 re-run is the authoritative one. Local execution is not
-required -- the notebook commits with code, and outputs are produced
-on Kaggle's runners.
 
 ## Notebook structure
 
@@ -49,35 +51,10 @@ on Kaggle's runners.
 | 11 | Failure mode tour |
 | 12 | Closing thoughts |
 
-## Compute budget
+## Compute
 
-Targets Kaggle's free T4. Full schedule:
-
-- L2P training scenario A: ~25 min
-- L2P training scenario B: ~25 min
-- Eval + plots: ~15 min
-- Total: ~65 min (under the 12-hour Kaggle limit)
-
-## Tags to add on Kaggle (after manual flip to public)
-
-Paste these into the notebook settings on Kaggle:
-
-- continual learning
-- vision transformer
-- transfer learning
-- pytorch
-- image classification
-- deep learning
-- tutorial
-- cifar-100
-
-## Notebook description for the Kaggle card
-
-> L2P (CVPR 2022) is one of the most popular prompt-based continual
-> learning methods. It works well on disjoint task splits -- but what
-> happens when classes come back? Using the CLOVER benchmark, I run
-> L2P on two overlap scenarios and look at what the prompt pool
-> actually learns. Spoiler in S9.
+Designed for Kaggle's free T4 GPU. Total runtime target: 60-90 minutes
+(two training runs at ~25 min each plus eval and plotting).
 
 ## License
 

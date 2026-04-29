@@ -1,18 +1,16 @@
-# Shared utilities
+# Shared
 
-This directory holds code reused across multiple projects:
+Reserved for code that's genuinely reused across more than one project.
 
-- `styling.py` — markdown templates and color palettes (added in Step C)
-- `plot_themes.py` — matplotlib/seaborn theme presets
-- `kaggle_helpers.py` — common Kaggle path resolution, dataset loading
+The notebooks in this repo are intentionally self-contained: plot
+theming, palette colors, and small helpers are inlined at the top of
+each notebook rather than imported from here. That keeps each notebook
+readable as a standalone artifact on Kaggle, where users can fork and
+run without dragging in an unfamiliar package layout.
 
-Import from notebooks via:
+If a shared module is added in the future it'll be importable via:
 
 ```python
-import sys
-sys.path.insert(0, '../../_shared')
-import styling
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', '..', '_shared'))
 ```
-
-Or, when running on Kaggle, copy the needed file to the working dir
-(handled automatically by the project's notebook setup cell).
