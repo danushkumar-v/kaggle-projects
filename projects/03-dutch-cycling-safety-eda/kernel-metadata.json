@@ -1,0 +1,13 @@
+{
+  "id": "danushkumarv/dutch-cycling-safety-eda",
+  "title": "Dutch cycling safety: accidents, weather and infrastructure",
+  "code_file": "notebook.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": "false",
+  "enable_gpu": "false",
+  "enable_internet": "true",
+  "dataset_sources": ["danushkumarv/dutch-cycling-accidents-infrastructure-weather"],
+  "competition_sources": [],
+  "kernel_sources": []
+}
