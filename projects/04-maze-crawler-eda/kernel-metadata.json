@@ -1,0 +1,24 @@
+{
+  "id": "danushkumarv/maze-crawler-episodes-eda",
+  "title": "Maze Crawler Episodes EDA",
+  "code_file": "notebook.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": "false",
+  "enable_gpu": "false",
+  "enable_internet": "true",
+  "dataset_sources": [
+    "kaggle/maze-crawler-episodes-index",
+    "kaggle/maze-crawler-episodes-2026-05-01",
+    "kaggle/maze-crawler-episodes-2026-05-02",
+    "kaggle/maze-crawler-episodes-2026-05-03",
+    "kaggle/maze-crawler-episodes-2026-05-04",
+    "kaggle/maze-crawler-episodes-2026-05-05",
+    "kaggle/maze-crawler-episodes-2026-05-06",
+    "kaggle/maze-crawler-episodes-2026-05-07",
+    "kaggle/maze-crawler-episodes-2026-05-08",
+    "kaggle/maze-crawler-episodes-2026-05-09"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}
